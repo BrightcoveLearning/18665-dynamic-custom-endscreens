@@ -27,6 +27,7 @@
 
   <script src="https://players.brightcove.net/videojs-custom-endscreen/2/videojs-custom-endscreen.min.js"></script>
   <script>
+    // +++ Wait for loadstart to read mediainfo data +++
     videojs.getPlayer('myPlayerID').on('loadstart',function() {
       var myPlayer = this;
 
@@ -36,7 +37,7 @@
 
         // +++ Build link string for the endscreen content +++
         hrefString = '<a href = "' + linkURL + '" target="_blank" rel="noopener noreferrer">' + linkText + '</a>'
-        
+
       // +++ Call endscreen method +++
       myPlayer.customEndscreen({
         "content": hrefString
