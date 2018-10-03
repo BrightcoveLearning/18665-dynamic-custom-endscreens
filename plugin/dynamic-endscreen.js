@@ -1,5 +1,7 @@
 videojs.registerPlugin('dynamicEndscreen', function() {
-  var myPlayer = this;
+  var myPlayer = this,
+    linkURL='',
+    linkText='';
   myPlayer.on('loadstart', function() {
 
     // +++ Retrieve info from mediainfo object +++

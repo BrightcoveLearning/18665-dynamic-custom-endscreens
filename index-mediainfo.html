@@ -29,10 +29,10 @@
   <script>
     // +++ Wait for loadstart to read mediainfo data +++
     videojs.getPlayer('myPlayerID').on('loadstart',function() {
-      var myPlayer = this;
+      var myPlayer = this,
 
         // +++ Retrieve info from mediainfo object +++
-        linkURL = myPlayer.mediainfo.link.url;
+        linkURL = myPlayer.mediainfo.link.url,
         linkText = myPlayer.mediainfo.link.text;
 
         // +++ Build link string for the endscreen content +++
